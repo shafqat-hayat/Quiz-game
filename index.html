@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizPro | Master Your Skills</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: radial-gradient(circle at top right, #2d1a0a, #05070a);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .white-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-200 min-h-screen flex flex-col justify-between p-6">
+    <main class="flex-grow flex items-center justify-center relative">
+        <section class="white-glass rounded-[2rem] p-8 w-full max-w-md text-center">
+            <h1 class="text-2xl font-extrabold mb-6 text-orange-500">Quiz<span class="text-white">Game</span></h1>
+            
+            <!-- Home Page Screen -->
+            <div id="home-box">
+                <div class="mb-8">
+                    <div class="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-4xl">
+                        🚀
+                    </div>
+                    <h2 class="text-2xl font-bold mb-2">Ready to Start?</h2>
+                    <p class="text-zinc-400">10 Questions •  • 100% Fun</p>
+                </div>
+                <button id="start-btn" class="w-full bg-orange-500 hover:bg-orange-600 py-4 rounded-xl font-bold transition-all shadow-lg shadow-orange-500/20">
+                    Start Quiz
+                </button>
+            </div>
+
+            <!-- Quiz Screen (Hidden by default) -->
+            <div id="quiz-box" class="hidden text-left">
+                <!-- Progress Bar -->
+                <div class="w-full bg-white/10 rounded-full h-1.5 mb-8">
+                    <div id="progress" class="bg-orange-500 h-1.5 rounded-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+
+                <h2 id="question" class="text-xl font-semibold mb-6">Loading...</h2>
+
+                <div id="options" class="grid gap-3">
+                    <!-- Buttons will be injected here -->
+                </div>
+            </div>
+
+            <!-- Result Screen (Hidden by default) -->
+            <div id="result-box" class="hidden">
+                <h2 class="text-3xl font-bold mb-2">Quiz Complete!</h2>
+                <p class="text-zinc-400 mb-6">Great job on finishing the challenge.</p>
+                <div class="text-6xl font-black text-orange-500 mb-8"><span id="final-score">0</span>%</div>
+                <button onclick="location.reload()" class="w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl font-bold transition-all">Try Again</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-xs text-zinc-500 uppercase tracking-widest">
+        &copy; 2026 Developed by Shafqat Dev
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+
